@@ -1,0 +1,20 @@
+[package]
+name = "gigaproxy"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "gigaproxy_game"
+path = "src/game.rs"
+
+[[bin]]
+name = "gigaproxy"
+path = "src/proxy.rs"
+
+[dependencies]
+twox-hash = "1"
+libc = "0"
